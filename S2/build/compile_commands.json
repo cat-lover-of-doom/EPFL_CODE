@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/waitman/Documents/work/EPFL/code/S2/build",
+  "command": "/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -o CMakeFiles/MyProject.dir/test.cpp.o -c /Users/waitman/Documents/work/EPFL/code/S2/test.cpp",
+  "file": "/Users/waitman/Documents/work/EPFL/code/S2/test.cpp",
+  "output": "CMakeFiles/MyProject.dir/test.cpp.o"
+}
+]

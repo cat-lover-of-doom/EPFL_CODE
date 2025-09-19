@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(MyProject LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Always export compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+file(GLOB SOURCES *.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Force macOS system paths into compile_commands.json
+target_compile_options(${PROJECT_NAME} PRIVATE
+    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+    -isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
+)
+
+# Copy compile_commands.json into project root for clangd/neovim
+if(CMAKE_EXPORT_COMPILE_COMMANDS)
+    add_custom_target(copy-compile-commands ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${CMAKE_BINARY_DIR}/compile_commands.json
+            ${CMAKE_SOURCE_DIR}/compile_commands.json
+    )
+endif()
