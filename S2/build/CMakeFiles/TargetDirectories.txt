@@ -1,4 +1,0 @@
-/Users/waitman/Documents/work/EPFL/code/S2/build/CMakeFiles/MyProject.dir
-/Users/waitman/Documents/work/EPFL/code/S2/build/CMakeFiles/copy-compile-commands.dir
-/Users/waitman/Documents/work/EPFL/code/S2/build/CMakeFiles/edit_cache.dir
-/Users/waitman/Documents/work/EPFL/code/S2/build/CMakeFiles/rebuild_cache.dir

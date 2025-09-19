@@ -1,7 +1,13 @@
 #!/bin/bash
 
-rm -rf build
 mkdir build
 cd build
 cmake ..
 cd ..
+rm -rf build
+
+
+clean(){
+  rm Makefile main
+}
+
